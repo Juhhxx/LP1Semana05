@@ -6,7 +6,7 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            
+            int enemyCount = int.Parse(args[0]);
         }
     }
 }
