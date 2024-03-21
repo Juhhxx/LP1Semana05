@@ -6,7 +6,8 @@ namespace RanDice
     {
         static void Main(string[] args)
         {
-            
+            int numDice = int.Parse(args[0]);
+            int randSeed = int.Parse(args[1]);
         }
     }
 }
