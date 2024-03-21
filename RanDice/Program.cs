@@ -12,6 +12,11 @@ namespace RanDice
 
             Random diceResult = new Random(randSeed);
 
+            for (int i = 0; i < numDice; i++)
+            {
+                total =+ diceResult.Next(1,7);
+            }
+
         }
     }
 }
