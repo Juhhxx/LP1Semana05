@@ -1,3 +1,5 @@
+using System;
+
 namespace MyGame
 {
     public class Enemy
@@ -52,6 +54,19 @@ namespace MyGame
             }
 
             this.name = newName;
+        }
+        public void PickupPowerUp(PowerUp powerToUpdate,float n)
+        {
+            if (powerToUpdate == PowerUp.Health)
+            {
+                this.health += n;
+                this.health = MathF.Floor(100);
+            }
+            else if (powerToUpdate == PowerUp.Shield)
+            {
+                this.shield += n;
+                this.shield = MathF.Floor(100);
+            }
         }
     }
 }
