@@ -18,13 +18,15 @@ namespace MyGame
                 enemyArray[i] = newEnemy;
             }
 
-            enemyArray[0].TakeDamage(50);
-            enemyArray[1].PickupPowerUp(PowerUp.Shield,100);
+            // enemyArray[0].TakeDamage(50);
+            // enemyArray[1].PickupPowerUp(PowerUp.Shield,100);
 
             foreach (Enemy enemyInst in enemyArray)
             {
                 Console.WriteLine($"{enemyInst.GetName()} {enemyInst.GetHealth()} {enemyInst.GetShield()}");
             }
+
+            // Console.WriteLine(enemyArray[0].GetPowerPickUp());
 
         }
     }

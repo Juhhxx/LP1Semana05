@@ -7,12 +7,17 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        static private int powerPickedup;
         
         public Enemy(string name)
         {
             SetName(name);
             health = 100;
             shield = 0;
+        }
+        static Enemy()
+        {
+            powerPickedup = 0;
         }
         public string GetName()
         {
@@ -25,6 +30,10 @@ namespace MyGame
         public float GetShield()
         {
             return shield;
+        }
+        public float GetPowerPickUp()
+        {
+            return powerPickedup;
         }
         public void TakeDamage(float damage)
         {
@@ -67,6 +76,7 @@ namespace MyGame
                 this.shield += n;
                 this.shield = MathF.Floor(100);
             }
+            powerPickedup += 1;
         }
     }
 }
