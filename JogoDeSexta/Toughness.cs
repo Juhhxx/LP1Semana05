@@ -8,6 +8,6 @@ namespace JogoDeSexta
         Easy,
         Normal,
         Tough,
-        Nighmare
+        Nightmare
     }
 }

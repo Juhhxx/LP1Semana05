@@ -1,6 +1,6 @@
 using System;
 
-namespace MyGameJogoDeSexta
+namespace JogoDeSexta
 {
     public class Enemy
     {
