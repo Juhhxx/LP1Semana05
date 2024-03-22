@@ -1,22 +1,21 @@
+using System;
+
 namespace JogoDeSexta
 {
     public class Level
     {
         int roomNum;
-        int diff;
-        static int enemyCount;
+        Toughness diff;
+        int enemyCount;
         Enemy[,] roomEnemy;
-        public Level(int roomNum, int diff)
+        public Level(int roomNum, Toughness diff)
         {
             this.roomNum = roomNum;
             this.diff = diff;
             roomEnemy = new Enemy[roomNum,1];
-        }
-        static Level()
-        {
             enemyCount = 0;
         }
-        public int GetToughness()
+        public Toughness GetToughness()
         {
             return diff;
         }
@@ -32,6 +31,16 @@ namespace JogoDeSexta
         {
             roomEnemy[roomIndex,0] = enemyToPlace;
             enemyCount += 1;
+        }
+        public void PrintEnemies()
+        {
+            for (int i = 0; i < roomNum; i++)
+            {
+                if (roomEnemy[i,0] != null)
+                {
+                    Console.WriteLine($"Room {i}: {roomEnemy[i,0].GetName()}");
+                }
+            }
         }
     }
 }
